@@ -1,0 +1,36 @@
+
+# Default values for demo.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+namespace: demo-namespace
+replicaCount: 2
+
+image:
+  repository: nginx
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+service:
+  type: NodePort
+  port: 80
+
+#env:
+#- name: PASSWORD 
+#  valueFrom: 
+#     secretKeyRef: 
+#          key: demopass
+#          name: demopassword
+
+
+
+
+
+
+
+
+
+#ingress:
+#   enabled: true 
+#   host: ec2-13-233-59-152.ap-south-1.compute.amazonaws.com 
+#   class: nginx
